@@ -1,0 +1,65 @@
+/* RegistrationForm.css */
+.main {
+    vertical-align: middle;
+    padding: 100px;
+    background-image: url('../images/clouds.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.registration-container {
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #F2A490;
+    text-align: center;
+  }
+  
+  .registration-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .registration-container label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    float: left;
+    margin-left: 30px;
+  }
+  
+  .registration-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .registration-container select {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .registration-container button {
+    width: 30%;
+    padding: 10px;
+    background: #89D4DB;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .registration-container button:hover {
+    background: #4788A2;
+  }
+  

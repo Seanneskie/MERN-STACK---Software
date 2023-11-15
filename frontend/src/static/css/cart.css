@@ -1,0 +1,78 @@
+/* Add this CSS to your stylesheet or style section */
+
+.cart-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: relative;
+    width: 600px;
+    border-radius: 30px;
+  }
+  
+  .cart-content {
+    text-align: center;
+  }
+  
+  .cart-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  .card-button:hover {
+    background-color: #A4B07E ;
+  }
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  thead, tbody {
+    border-bottom: 1px solid #ddd; /* Add a border between the header and body */
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Add a background color to the header */
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5; /* Highlight the row on hover */
+  }
+  

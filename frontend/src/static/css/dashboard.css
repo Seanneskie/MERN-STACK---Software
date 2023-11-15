@@ -1,0 +1,26 @@
+.form-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px; /* Set a fixed width or adjust as needed */
+  }
+  
+  .admin-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Add the following styles to make forms display side by side */
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Adjust as needed for responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  
