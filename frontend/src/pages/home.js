@@ -98,6 +98,12 @@ const Home = () => {
     setIsCartOpen(false);
   };
 
+  const removeFromCart = (index) => {
+    // Remove the item at the specified index from the cart
+    const updatedCart = [...cartItems];
+    updatedCart.splice(index, 1);
+    setCartItems(updatedCart);
+  };
   const addToCart = (product) => {
     // Check if the product is already in the cart
     const existingProduct = cartItems.find((item) => item.name === product.title);
@@ -252,11 +258,11 @@ const Home = () => {
             />
           ))}
         </div>
-        <ReceiptModal
+         <ReceiptModal
           isOpen={isReceiptOpen}
           closeReceipt={() => {
             closeReceipt();
-            clearCheckoutStatus(); // Clear checkout status when closing receipt modal
+            clearCheckoutStatus();
           }}
           cartItems={cartItems}
           totalCost={cartItems.reduce((total, item) => total + item.price * item.count, 0)}
@@ -266,6 +272,7 @@ const Home = () => {
         <Modal isOpen={isCartOpen} closeCart={closeCart}>
           <Cart
             cartItems={cartItems}
+            removeFromCart={removeFromCart} // Pass the removeFromCart function as a prop
             closeCart={closeCart}
             checkout={checkout}
             delivery={delivery}

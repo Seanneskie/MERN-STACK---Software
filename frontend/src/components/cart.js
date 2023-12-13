@@ -1,9 +1,8 @@
 // Cart.js
 import React from 'react';
-import '../static/css/cart.css'
+import '../static/css/cart.css';
 
-
-const Cart = ({ cartItems, closeCart, checkout, delivery, setDelivery, address, setAddress }) => {
+const Cart = ({ cartItems, removeFromCart, closeCart, checkout, delivery, setDelivery, address, setAddress }) => {
   return (
     <div className="cart-modal">
       <div className="cart-content">
@@ -14,6 +13,7 @@ const Cart = ({ cartItems, closeCart, checkout, delivery, setDelivery, address, 
               <th>Item</th>
               <th>Count</th>
               <th>Price</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -22,6 +22,9 @@ const Cart = ({ cartItems, closeCart, checkout, delivery, setDelivery, address, 
                 <td>{item.name}</td>
                 <td>{item.count}</td>
                 <td>{item.price}</td>
+                <td>
+                  <button onClick={() => removeFromCart(index)}>Remove</button>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -40,8 +43,8 @@ const Cart = ({ cartItems, closeCart, checkout, delivery, setDelivery, address, 
           </label>
         </div>
         <button className='card-button' onClick={() => {
-          checkout(); // Call the checkout function
-          closeCart(); // Call the closeCart function
+          checkout();
+          closeCart();
         }}>Checkout</button>
         <button className='card-button' onClick={closeCart}>Close Cart</button>
       </div>

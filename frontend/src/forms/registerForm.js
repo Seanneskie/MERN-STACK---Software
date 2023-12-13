@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../static/css/register.css'
-import Header from '../components/header';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -53,7 +52,7 @@ function RegistrationForm() {
 
   return (
     <div> 
-        <Header /> 
+       
         <div className='main'>
         <form onSubmit={handleSubmit}>
             <div className="registration-container">

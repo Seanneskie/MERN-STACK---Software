@@ -37,15 +37,24 @@
 
     // connect to db    
 
+   const MONGO_URI = 'mongodb+srv://seannecanete32:Tuskan32@cluster01-seanneskie.vt8wksv.mongodb.net/';
 
-    mongoose.connect(process.env.MONGO_URI)
-        .then(()=>{
-            app.listen(process.env.PORT, () => {
-                console.log('listening on', process.env.PORT)
-            });
-        })
-        .catch((error) => {
-            console.log(error);
-        })  
+    // Specify the name of your MongoDB database
+    const dbName = 'cafe';
 
-    // listen for requests
+    // Specify the name of the collection you want to connect to
+
+    mongoose.connect(`${MONGO_URI}${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        // Now that you're connected to the database, you can reference the collection
+
+        // Perform operations on the collection as needed
+
+        // Start your app after connecting to MongoDB
+        app.listen(process.env.PORT, () => {
+            console.log('Listening on', process.env.PORT);
+        });
+    })
+    .catch((error) => {
+        console.log(error);
+    });
