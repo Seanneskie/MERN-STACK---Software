@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../static/css/dashboard.css';
 import ProductList from '../components/productView';
+import UserList from '../components/manageUser';
 
 function AdminPage() {
   const [product, setProduct] = useState({
@@ -137,6 +138,7 @@ function AdminPage() {
             </div>
 
             <ProductList />
+            <UserList />
         </div>
     </div>
   );
