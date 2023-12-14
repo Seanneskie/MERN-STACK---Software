@@ -15,7 +15,7 @@ function ProductList() {
     // Fetch products from the API endpoint
     const fetchProducts = async () => {
       try {
-        const response = await fetch('/api/products');
+        const response = await fetch('/api/product');
         if (response.ok) {
           const data = await response.json();
           setProducts(data);
@@ -32,7 +32,7 @@ function ProductList() {
 
   const handleDelete = async (productId) => {
     try {
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`/api/product/${productId}`, {
         method: 'DELETE',
       });
 
@@ -71,7 +71,7 @@ function ProductList() {
 
   const handleUpdate = async (productId) => {
     try {
-      const response = await fetch(`/api/products/${productId}`, {
+      const response = await fetch(`/api/product/${productId}`, {
         method: 'PATCH',
         body: JSON.stringify(editedProductData),
         headers: {
